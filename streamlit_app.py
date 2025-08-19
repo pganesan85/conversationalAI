@@ -15,7 +15,7 @@ query = st.text_input("Enter your financial question:")
 if query:
     if method == "RAG":
         retrieved = retrieve_chunks(query, chunks, index, embeddings)
-        context = "\n".join(retrieved)
+        context ="\n".join([str(item) for item in retrieved])
         st.write("Retrieved Context:", context)
         # Generate answer using a generative model (e.g., GPT-2)
         # You can plug in your response generation logic here
