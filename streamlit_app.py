@@ -9,6 +9,7 @@ st.markdown("""
         border: 2px solid #FF5733;  /* Change color here */
         border-radius: 6px;
         padding: 6px;
+        border-color: #33C3F0;
         outline: none;
     }
     div[data-testid="stTextInput"] > div > input:focus {
