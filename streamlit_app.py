@@ -20,5 +20,5 @@ if query:
         # Generate answer using a generative model (e.g., GPT-2)
         # You can plug in your response generation logic here
     else:
-      #  answer = generate_answer_ft(query)
+         answer = generate_answer_ft(query)
          st.write("Answer:", answer)
