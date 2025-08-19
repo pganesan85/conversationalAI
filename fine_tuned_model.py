@@ -2,7 +2,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
 
 # Load fine-tuned model
-model = GPT2LMHeadModel.from_pretrained("DistilBERT")
+model = GPT2LMHeadModel.from_pretrained("distilbert-base-uncased")
 print(model)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
