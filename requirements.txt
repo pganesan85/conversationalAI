@@ -4,3 +4,4 @@ transformers
 faiss-cpu
 scikit-learn
 pandas
+GPT2LMHeadModel
