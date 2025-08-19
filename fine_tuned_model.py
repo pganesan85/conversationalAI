@@ -3,6 +3,7 @@ import torch
 
 # Load fine-tuned model
 model = GPT2LMHeadModel.from_pretrained("path_to_finetuned_model")
+print(model)
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 def generate_answer_ft(query):
