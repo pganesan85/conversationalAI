@@ -21,4 +21,4 @@ if query:
         # You can plug in your response generation logic here
     else:
       #  answer = generate_answer_ft(query)
-       #  st.write("Answer:", answer)
+         st.write("Answer:", answer)
