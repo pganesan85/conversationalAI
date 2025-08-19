@@ -3,7 +3,7 @@ from rag_pipeline import embed_chunks, retrieve_chunks
 #from fine_tuned_model import generate_answer_ft
 
 # Load data
-chunks [("Hello", "world"), ("How", "are you?")]  # Load your financial text chunks
+chunks = [("Hello", "world"), ("How", "are you?")]  # Load your financial text chunks
 index, embeddings = embed_chunks(chunks)
 
 st.title("📊 Financial Q&A Assistant")
