@@ -1,6 +1,6 @@
 import streamlit as st
 from rag_pipeline import embed_chunks, retrieve_chunks
-from fine_tuned_model import generate_answer_ft
+#from fine_tuned_model import generate_answer_ft
 
 # Load data
 chunks = [...]  # Load your financial text chunks
@@ -20,5 +20,5 @@ if query:
         # Generate answer using a generative model (e.g., GPT-2)
         # You can plug in your response generation logic here
     else:
-        answer = generate_answer_ft(query)
-        st.write("Answer:", answer)
+      #  answer = generate_answer_ft(query)
+       #  st.write("Answer:", answer)
