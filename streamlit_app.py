@@ -1,6 +1,6 @@
 import streamlit as st
 from rag_pipeline import embed_chunks, retrieve_chunks
-#from fine_tuned_model import generate_answer_ft
+from fine_tuned_model import generate_answer_ft
 
 # Load data
 chunks = [("Hello", "world"), ("How", "are you?")]  # Load your financial text chunks
