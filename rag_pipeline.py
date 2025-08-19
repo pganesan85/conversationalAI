@@ -1,5 +1,4 @@
-pip install --upgrade sentence-transformers
-pip install faiss
+
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
