@@ -4,6 +4,7 @@ import numpy as np
 
 # Load embedding model
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
+print(embedder)
 
 # Load and embed chunks
 def embed_chunks(chunks):
