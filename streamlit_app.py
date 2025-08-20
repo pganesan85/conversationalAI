@@ -26,17 +26,36 @@ index, embeddings = embed_chunks(chunks)
 
 st.title("📊 Comparitive Financial Q&A System")
 
-method = st.radio("Choose Method", ["RAG", "Fine-Tuned"])
+# Add "Both" option
+method = st.radio("Choose Method", ["RAG", "Fine-Tuned", "Both"])
 
 query = st.text_input("Enter your financial question:")
 
 if query:
     if method == "RAG":
         retrieved = retrieve_chunks(query, chunks, index, embeddings)
-        context ="\n".join([str(item) for item in retrieved])
-        st.write("Retrieved Context:", context)
-        # Generate answer using a generative model (e.g., GPT-2)
-        # You can plug in your response generation logic here
-    else:
-         answer = generate_answer_ft(query)
-         st.write("Answer:", answer)
+        rag_context = "\n".join([str(item) for item in retrieved])
+        st.subheader("RAG Output")
+        st.write(rag_context)
+
+    elif method == "Fine-Tuned":
+        ft_answer = generate_answer_ft(query)
+        st.subheader("Fine-Tuned Output")
+        st.write(ft_answer)
+
+    elif method == "Both":
+        # Get both outputs
+        retrieved = retrieve_chunks(query, chunks, index, embeddings)
+        rag_context = "\n".join([str(item) for item in retrieved])
+        ft_answer = generate_answer_ft(query)
+
+        # Display in two columns
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.subheader("RAG Output")
+            st.write(rag_context)
+
+        with col2:
+            st.subheader("Fine-Tuned Output")
+            st.write(ft_answer)
