@@ -17,5 +17,6 @@ def embed_chunks(chunks):
 def retrieve_chunks(query, chunks, index, embeddings, top_n=5):
     query_vec = embedder.encode([query])
     _, indices = index.search(np.array(query_vec), top_n)
-    return [chunks[i] for i in indices[0]]
+    # Return only the answer part (second element of tuple)
+    return [chunks[i][1] for i in indices[0]]
 
