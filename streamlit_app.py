@@ -24,7 +24,7 @@ st.markdown("""
 chunks = [("Hello", "world"), ("How", "are you?")]  # Load your financial text chunks
 index, embeddings = embed_chunks(chunks)
 
-st.title("📊 Comparitive Financial Q&A System")
+st.title("📊 Financial Q&A System")
 
 # Add "Both" option
 method = st.radio("Choose Method", ["RAG", "Fine-Tuned", "Both"])
