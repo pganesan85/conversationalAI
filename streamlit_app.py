@@ -85,7 +85,7 @@ chunks =  [
 
 index, embeddings = embed_chunks(chunks)
 
-st.title("📊 Financial Q&A System")
+st.title("Comparitive Financial Q&A System")
 
 # Add "Both" option
 method = st.radio("Choose Method", ["RAG", "Fine-Tuned", "Both"])
