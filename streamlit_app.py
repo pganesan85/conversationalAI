@@ -22,7 +22,7 @@ st.markdown("""
 
 # Load data
 
-get_text_from_pdf()
+data = get_text_from_pdf()
 chunks =  [
     ("What was the company’s total revenue in 2023?", "The company’s total revenue in 2023 was $4.13 billion."),
     ("How did revenue change compared to 2022?", "Revenue grew by 10% compared to 2022."),
